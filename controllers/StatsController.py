@@ -1,7 +1,7 @@
 import logging
 from models.Mutant import Mutant
+from config.database import db_session
 from sqlalchemy import func
-from mutantDetector.database import db_session
 from flask_restful import abort, Resource, request
 
 

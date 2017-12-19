@@ -3,10 +3,10 @@
 import re
 import logging
 from models.Mutant import Mutant
+from services.MutantDetectorService import MutantDetector
+from config.database import db_session
 from flask_restful import abort, Resource, request
 from flask import current_app
-from services.MutantDetectorService import MutantDetector
-from mutantDetector.database import db_session
 
 
 class MutantController(Resource):

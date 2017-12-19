@@ -1,3 +1,3 @@
-from mutantDetector import db
-from mutantDetector.models import *
+from database import db
+from models import *
 db.create_all()

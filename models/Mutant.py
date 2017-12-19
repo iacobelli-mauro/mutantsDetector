@@ -1,5 +1,7 @@
-from mutantDetector import db
+from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
+
+db = SQLAlchemy()
 
 class Mutant(db.Model):
     id = db.Column(db.Integer, primary_key=True)
