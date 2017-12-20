@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import re
 import logging
-from models.Mutant import Mutant
-from services.MutantDetectorService import MutantDetector
+import re
 from config.database import db_session
 from flask_restful import abort, Resource, request
 from flask import current_app
+from models.Mutant import Mutant
+from services.MutantDetectorService import MutantDetector
 
 
 class MutantController(Resource):
