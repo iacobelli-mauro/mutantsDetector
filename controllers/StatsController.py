@@ -7,6 +7,7 @@ from flask_restful import abort, Resource, request
 
 class StatsController(Resource):
     """Class for the Stats Controller."""
+
     def get(self):
         """Returns the stats info."""
         try:
@@ -23,8 +24,11 @@ class StatsController(Resource):
                 else:
                     response['count_human_dna'] = row[1]
             # Calculate ratio
-            response['ratio'] = float(
-                float(response['count_mutant_dna'] * 100 / response['count_human_dna']) / 100)
+            if response['count_mutant_dna'] > 0 and response['count_human_dna'] > 0:
+                response['ratio'] = float(
+                    float(response['count_mutant_dna'] * 100 / response['count_human_dna']) / 100)
+            else:
+                response['ratio'] = float(0.0)
             return response, 200
         except RuntimeError as ex:
             logging.error("Ah ocurrido un error en la ejecucion.")
