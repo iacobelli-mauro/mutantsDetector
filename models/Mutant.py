@@ -1,11 +1,15 @@
-from config.database import db
+from config.database import Base
 from datetime import datetime
+from sqlalchemy import Column, Integer, String, Boolean, DateTime
 
-class Mutant(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    dna = db.Column(db.String(41), unique=False, nullable=False)
-    isMutant = db.Column(db.Boolean, nullable=False)
-    date = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+
+
+class Mutant(Base):
+    __tablename__ = 'mutant'
+    id = Column(Integer, primary_key=True)
+    dna = Column(String(41), unique=False, nullable=False)
+    isMutant = Column(Boolean, nullable=False)
+    date = Column(DateTime, nullable=False, default=datetime.utcnow)
 
     def __init__(self, dna):
         self.dna = "-".join(dna)
