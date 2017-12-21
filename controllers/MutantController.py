@@ -46,6 +46,7 @@ class MutantController(Resource):
             else:
                 abort(403, message="Not a Mutant")
         except RuntimeError as ex:
+            db_session.rollback()
             logging.error("Ah ocurrido un error en la ejecucion.")
             logging.error(ex)
             abort(500, message="Unespected error")

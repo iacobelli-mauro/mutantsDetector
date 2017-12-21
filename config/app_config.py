@@ -9,3 +9,4 @@ if os.environ['ENVIRONMENT']:
 else:
     SQLALCHEMY_DATABASE_URI = 'mysql://root:root@localhost/mutantDB?charset=utf8'
 SQLALCHEMY_TRACK_MODIFICATIONS = False
+SQLALCHEMY_POOL_RECYCLE = 50
