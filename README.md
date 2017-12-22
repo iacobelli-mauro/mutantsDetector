@@ -13,13 +13,13 @@ La api /mutant/ detecta ADN mutante dentro de una cadena de entrada.
 Si el ADN es mutante la respuesta sera HTTP 200-OK, en caso contrario un 403-Forbidden.
 ```
 POST → /mutant/ 
-BODY {“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
+BODY { “dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"] }
 ```
 
 La api /stats/ devuelve un Json con las estadísticas de las verificaciones de ADN: 
 ```
-GET→“/stats/” 
-{“count_mutant_dna”:40, “count_human_dna”:100, “ratio”:0.4}
+GET → /stats/
+RESPONSE { “count_mutant_dna”:40, “count_human_dna”:100, “ratio”:0.4 }
 ```
 
 ---
