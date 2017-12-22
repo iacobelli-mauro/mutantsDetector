@@ -32,6 +32,8 @@ Requerimientos de ambiente: Python 2.7, pip, virtualenv (opcional)
 #### Se recomienda usar virualenv para crear el ambiente de desarrollo.
 ```
 virtualenv mutantsDetector
+cd mutantsDetector
+Scripts\activate
 ```
 #### Clonar el repo dentro del directorio creado en el paso anterior.
 ```
@@ -50,7 +52,7 @@ SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host/database?charset=utf8'
 #### Crear el modelo de tablas
 Se debe ejecutar lo siguiente en el root de la aplicación:
 ```
-python config\create_database.py
+python create_database.py
 ```
 #### Levantar el ambiente
 ```
