@@ -75,6 +75,9 @@ MATRIX_I_LENGTH
 MATRIX_X_LENGTH
 ##### Ancho de la matriz requerido
 
+### Logs
+Dentro del archivo config\log_config.py se podra configurar los distintos metodos de log.
+
 ### Configuración de AWS
 Para evitar problemas de performance, se agregara una nueva instancia automaticamente cuando la salida de la red sea mayor o igual a 20000 bytes por minuto, durante 5 minutos seguidos.
 
