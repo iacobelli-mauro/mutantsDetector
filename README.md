@@ -1,5 +1,5 @@
 # mutantsDetector
-Detector de Mutantes en base a la cadena de ADN para reclutar Mutantes en la lucha contra los X-Men
+Detector de Mutantes en las bases de la cadena de ADN para reclutar Mutantes en la lucha contra los X-Men
 
 ## Endpoints
 /mutant
@@ -49,7 +49,7 @@ La linea a modificar es la siguiente.
 ```
 SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host/database?charset=utf8'
 ```
-Nota: La primer linea de esta propiedad, responde solo a la configuración de AWS.
+Nota: La primer línea de esta propiedad, responde solo a la configuración de AWS.
 #### Crear el modelo de tablas
 Se debe ejecutar lo siguiente en el root de la aplicación:
 ```
@@ -64,22 +64,22 @@ http://localhost:5000/stats
 
 #### Configuraciones
 ### Aplicación
-Desde el archivo config\app_config.py se pueden modificar los siguientes parametros:
+Desde el archivo config\app_config.py se pueden modificar los siguientes parámetros:
 
 MIN_OCURRENCE_NEEDED
-##### Cantidad de bases sucesivas para tomar como un gen mutante
+##### Cantidad de bases repetidas sucesivas para tomar a un gen como mutado
 MIN_MUTANT_DNA_COUNT
-##### Cantidad de genes mutantes requeridos para ser catalogado como mutante
+##### Cantidad de genes mutados requeridos para ser considerado como mutante
 MATRIX_I_LENGTH
 ##### Largo de la matriz requerido
 MATRIX_X_LENGTH
 ##### Ancho de la matriz requerido
 
 ### Logs
-Dentro del archivo config\log_config.py se podra configurar los distintos metodos de log.
+Dentro del archivo config\log_config.py se podrá configurar los distintos métodos de log.
 
 ### Configuración de AWS
-Para evitar problemas de performance, se agregara una nueva instancia automaticamente cuando la salida de la red sea mayor o igual a 20000 bytes por minuto, durante 5 minutos seguidos.
+Para evitar problemas de performance, se agregará una nueva instancia automáticamente cuando la salida de la red sea mayor o igual a 20000 bytes por minuto, durante 5 minutos seguidos.
 
 ### Tests
 Para ejecutar los test unitarios, se debe de ejecutar el siguiente comando desde el root de la aplicación.
