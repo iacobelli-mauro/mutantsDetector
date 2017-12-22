@@ -50,7 +50,7 @@ La linea a modificar es la siguiente.
 SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host/database?charset=utf8'
 ```
 #### Crear el modelo de tablas
-Se debe ejecutar lo siguiente:
+Se debe ejecutar lo siguiente en el root de la aplicación:
 ```
 python config\create_database.py
 ```
@@ -62,12 +62,23 @@ Url de prueba:
 http://localhost:5000/stats
 
 #### Configuraciones
-### Picos de trafico dinamicos 
+### Aplicación
+Desde el archivo config\app_config.py se pueden modificar los siguientes parametros:
 
-Para evitar problemas de performance, se agregara una nueva instancia automaticamente cuando el uso del CPU sea de 20000 bytes por minuto, durante 5 minutos. 
+MIN_OCURRENCE_NEEDED
+##### Cantidad de bases sucesivas para tomar como un gen mutante
+MIN_MUTANT_DNA_COUNT
+##### Cantidad de genes mutantes requeridos para ser catalogado como mutante
+MATRIX_I_LENGTH
+##### Largo de la matriz requerido
+MATRIX_X_LENGTH
+##### Ancho de la matriz requerido
+
+### Configuración de AWS
+Para evitar problemas de performance, se agregara una nueva instancia automaticamente cuando la salida de la red sea mayor o igual a 20000 bytes por minuto, durante 5 minutos seguidos.
 
 ### Tests
-Para ejecutar los test unitarios, se debe de ejecutar el siguiente comando.
+Para ejecutar los test unitarios, se debe de ejecutar el siguiente comando desde el root de la aplicación.
 ```
 python test_application.py
 ```
