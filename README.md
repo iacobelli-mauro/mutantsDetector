@@ -47,8 +47,9 @@ pip install -r requerimients.txt
 Se debe modificar el archivo app_config.py. 
 La linea a modificar es la siguiente.
 ```
-SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host/database?charset=utf8'
+    SQLALCHEMY_DATABASE_URI = 'mysql://user:password@host/database?charset=utf8'
 ```
+Nota: La primer linea de esta propiedad, responde solo a la configuración de AWS.
 #### Crear el modelo de tablas
 Se debe ejecutar lo siguiente en el root de la aplicación:
 ```
