@@ -50,3 +50,5 @@ class MutantController(Resource):
             logging.error("Ah ocurrido un error en la ejecucion.")
             logging.error(ex)
             abort(500, message="Unespected error")
+        finally:
+            db_session.remove()
