@@ -2,26 +2,24 @@
 Detector de Mutantes en base a la cadena de ADN para reclutar Mutantes en la lucha contra los X-Men
 
 ## Endpoints
-/v1/mutant
+/mutant
 
-/v1/stats
+/stats
 
 ## Usage
 
-La api /mutant/ detecta si un humano es mutante enviando la secuencia de ADN mediante un HTTP POST
-En caso de verificar un mutante, devuelve un HTTP 200-OK, en caso contrario un 403-Forbidden
+La api /mutant/ detecta ADN mutante dentro de una cadena de entrada.
 
+Si el ADN es mutante la respuesta sera HTTP 200-OK, en caso contrario un 403-Forbidden.
 ```
 POST → /mutant/ 
 BODY {“dna”:["ATGCGA","CAGTGC","TTATGT","AGAAGG","CCCCTA","TCACTG"]}
 ```
 
 La api /stats/ devuelve un Json con las estadísticas de las verificaciones de ADN: 
-
-{“count_mutant_dna”:40, “count_human_dna”:100, “ratio”:0.4}
-
 ```
 GET→“/stats/” 
+{“count_mutant_dna”:40, “count_human_dna”:100, “ratio”:0.4}
 ```
 
 ---

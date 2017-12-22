@@ -13,7 +13,7 @@ class MutantController(Resource):
     """Class for the Mutant Controller."""
     def post(self):
         """Validate the base proteins and returns the result."""
-        input_data = request.get_json()['mutantDna']
+        input_data = request.get_json()['dna']
         # Load the matrix length for validations
         matrix_i = current_app.config['MATRIX_I_LENGTH']
         matrix_x = current_app.config['MATRIX_X_LENGTH']
